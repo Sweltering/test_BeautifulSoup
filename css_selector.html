@@ -1,0 +1,61 @@
+<!--css选择器的6种使用方式-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        /*通过标签p来找*/
+        /*p{*/
+            /*background-color: pink;*/
+        /*}*/
+
+        /*通过类class名来找*/
+        /*.line1{*/
+            /*background-color: pink;*/
+        /*}*/
+
+        /*通过id来找*/
+        /*#line3{*/
+            /*background-color: pink;*/
+        /*}*/
+
+        /*组合查找，类class等于box并且它的下面标签为p的*/
+        /*.box p{*/
+            /*background-color: pink;*/
+        /*}*/
+
+        /*组合查找，class等于box下的直接子元素*/
+        /*.box > p{*/
+            /*background-color: pink;*/
+        /*}*/
+
+        /*通过属性查找*/
+        /*input[name='username']{*/
+            /*background-color: #8c4fff;*/
+        /*}*/
+
+        /*通过标签加类的值找*/
+        div.line1{
+            background-color: #0000d0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>
+            <p>第0行元素</p>
+        </div>
+        <p class="line1">第一行数据</p>
+        <p class="line1">第二行数据</p>
+        <div class="line1">div中的数据</div>
+        <p id="line3">第三行数据</p>
+    </div>
+    <p>第四行数据</p>
+    <form>
+        <input type="text" name="username">
+        <input type="text" name="password">
+    </form>
+</body>
+</html>
